@@ -1,0 +1,7 @@
+﻿ ●エラー表示
+		Try
+            
+       Catch ex As Exception
+            MsgBox(ExMessCreater(GetStack(ex)), 48, "エラー")
+
+        End Try

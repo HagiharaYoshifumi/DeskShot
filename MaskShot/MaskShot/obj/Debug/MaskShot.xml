@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MaskShot
+</name>
+</assembly>
+<members>
+<member name="M:MaskShot.Module1.CaptureScreen">
+	<summary>
+ プライマリスクリーンの画像を取得する
+ </summary>
+	<returns>プライマリスクリーンの画像</returns>
+</member><member name="M:MaskShot.Module1.CaptureActiveWindow(MaskShot.PosiShift_Collection)">
+	<summary>
+ アクティブなウィンドウの画像を取得する
+ </summary>
+	<returns>アクティブなウィンドウの画像</returns>
+</member><member name="P:MaskShot.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:MaskShot.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:MaskShot.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:MaskShot.FrmMain.PictureClipbord(System.Drawing.Bitmap)">
+	<summary>
+ クリップボードへ画像を転送
+ </summary>
+	<param name="BMPData"></param>
+	<remarks></remarks>
+</member><member name="M:MaskShot.FrmMain.GetPicture">
+	<summary>
+ 画面をクリップ
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,12 @@
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\bin\Release\MaskShot.exe
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\bin\Release\MaskShot.pdb
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\bin\Release\MaskShot.xml
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Release\MaskShot.FrmMain.resources
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Release\MaskShot.Resources.resources
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Release\MaskShot.vbproj.GenerateResource.Cache
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Release\MaskShot.exe.licenses
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Release\MaskShot.exe
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Release\MaskShot.xml
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Release\MaskShot.pdb
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\bin\Release\MaskShot.exe.config
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Release\MaskShot.vbprojResolveAssemblyReference.cache

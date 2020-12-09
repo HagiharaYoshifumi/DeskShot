@@ -1,0 +1,13 @@
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\bin\Debug\Pose Estimation.exe
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\bin\Debug\Pose Estimation.pdb
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\bin\Debug\AForge.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\bin\Debug\AForge.Math.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\bin\Debug\AForge.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\bin\Debug\AForge.Math.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\obj\Debug\Pose Estimation.csprojResolveAssemblyReference.cache
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\obj\Debug\PoseEstimation.MainForm.resources
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\obj\Debug\PoseEstimation.MatrixControl.resources
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\obj\Debug\PoseEstimation.Properties.Resources.resources
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\obj\Debug\Pose Estimation.csproj.GenerateResource.Cache
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\obj\Debug\Pose Estimation.exe
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Math\Pose Estimation 2\obj\Debug\Pose Estimation.pdb

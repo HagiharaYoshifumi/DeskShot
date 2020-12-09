@@ -1,0 +1,11 @@
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\bin\Release\ReadQRCode.exe
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\bin\Release\ReadQRCode.pdb
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\bin\Release\ReadQRCode.xml
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\bin\Release\zxing.dll
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\obj\Release\ReadQRCode.vbprojResolveAssemblyReference.cache
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\obj\Release\ReadQRCode.Form1.resources
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\obj\Release\ReadQRCode.Resources.resources
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\obj\Release\ReadQRCode.vbproj.GenerateResource.Cache
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\obj\Release\ReadQRCode.exe
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\obj\Release\ReadQRCode.xml
+C:\Makesource\DeskShot(画面キャプチャー)\ReadQRCode\obj\Release\ReadQRCode.pdb

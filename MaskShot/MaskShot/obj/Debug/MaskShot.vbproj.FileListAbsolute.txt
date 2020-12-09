@@ -1,0 +1,10 @@
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\bin\Debug\MaskShot.exe
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\bin\Debug\MaskShot.pdb
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\bin\Debug\MaskShot.xml
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Debug\MaskShot.FrmMain.resources
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Debug\MaskShot.Resources.resources
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Debug\MaskShot.vbproj.GenerateResource.Cache
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Debug\MaskShot.exe.licenses
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Debug\MaskShot.exe
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Debug\MaskShot.xml
+C:\Makesource\DeskShot(画面キャプチャー)\MaskShot\MaskShot\obj\Debug\MaskShot.pdb

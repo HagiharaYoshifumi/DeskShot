@@ -1,0 +1,51 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DeskShot
+</name>
+</assembly>
+<members>
+<member name="P:DeskShot.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:DeskShot.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:DeskShot.Module1.SaveAnimatedGif(System.String,System.Drawing.Bitmap[],System.UInt16,System.UInt16)">
+	<summary>
+ 複数の画像をGIFアニメーションとして保存する
+ </summary>
+	<param name="fileName">保存先のファイルのパス。</param>
+	<param name="baseImages">GIFアニメにする画像。</param>
+	<param name="delayTime">遅延時間（100分の1秒単位）。</param>
+	<param name="loopCount">繰り返す回数。0で無限。</param>
+</member><member name="M:DeskShot.Module1.ReadBytes(System.IO.MemoryStream,System.Int32)">
+	<summary>
+ MemoryStreamの現在の位置から指定されたサイズのバイト配列を読み取る
+ </summary>
+	<param name="ms">読み取るMemoryStream</param>
+	<param name="count">読み取るバイトのサイズ</param>
+	<returns>読み取れたバイト配列</returns>
+</member><member name="M:DeskShot.Module1.GetApplicationExtension(System.UInt16)">
+	<summary>
+ Netscape Application Extensionブロックを返す。
+ </summary>
+	<param name="loopCount">繰り返す回数。0で無限。</param>
+	<returns>Netscape Application Extensionブロックのbyte配列。</returns>
+</member><member name="M:DeskShot.Module1.GetGraphicControlExtension(System.UInt16)">
+	<summary>
+ Graphic Control Extensionブロックを返す。
+ </summary>
+	<param name="delayTime">遅延時間（100分の1秒単位）。</param>
+	<returns>Graphic Control Extensionブロックのbyte配列。</returns>
+</member>
+</members>
+</doc>

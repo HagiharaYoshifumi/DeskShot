@@ -1,0 +1,1911 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DeskShot
+</name>
+</assembly>
+<members>
+<member name="P:DeskShot.FrmSelectAria.SelectPosition">
+	<summary>
+ 選択位置
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmSelectAria.SelectSize">
+	<summary>
+ 選択サイズ
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmSelectAria.WorkScreenNo">
+	<summary>
+ 対象スクリーン番号
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.Module1.SaveAnimatedGif(System.String,System.Drawing.Bitmap[],System.UInt16,System.UInt16)">
+	<summary>
+ 複数の画像をGIFアニメーションとして保存する
+ </summary>
+	<param name="fileName">保存先のファイルのパス。</param>
+	<param name="baseImages">GIFアニメにする画像。</param>
+	<param name="delayTime">遅延時間（100分の1秒単位）。</param>
+	<param name="loopCount">繰り返す回数。0で無限。</param>
+</member><member name="M:DeskShot.Module1.ReadBytes(System.IO.MemoryStream,System.Int32)">
+	<summary>
+ MemoryStreamの現在の位置から指定されたサイズのバイト配列を読み取る
+ </summary>
+	<param name="ms">読み取るMemoryStream</param>
+	<param name="count">読み取るバイトのサイズ</param>
+	<returns>読み取れたバイト配列</returns>
+</member><member name="M:DeskShot.Module1.GetApplicationExtension(System.UInt16)">
+	<summary>
+ Netscape Application Extensionブロックを返す。
+ </summary>
+	<param name="loopCount">繰り返す回数。0で無限。</param>
+	<returns>Netscape Application Extensionブロックのbyte配列。</returns>
+</member><member name="M:DeskShot.Module1.GetGraphicControlExtension(System.UInt16)">
+	<summary>
+ Graphic Control Extensionブロックを返す。
+ </summary>
+	<param name="delayTime">遅延時間（100分の1秒単位）。</param>
+	<returns>Graphic Control Extensionブロックのbyte配列。</returns>
+</member><member name="M:DeskShot.Module2.CaptureScreen(System.Int32)">
+	<summary>
+ プライマリスクリーンの画像を取得する
+ </summary>
+	<returns>プライマリスクリーンの画像</returns>
+</member><member name="M:DeskShot.Module2.CaptureActiveWindow(DeskShot.PosiShift_Collection)">
+	<summary>
+ アクティブなウィンドウの画像を取得する
+ </summary>
+	<returns>アクティブなウィンドウの画像</returns>
+</member><member name="M:DeskShot.Module3.CreateTempFileName">
+	<summary>
+ 一意のファイル名を生成します。
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.Module3.GetScreenNo(System.Windows.Forms.Form)">
+	<summary>
+ メインフォームのあるスクリーン番号を取得する
+ </summary>
+	<param name="Frm">検証するフォーム</param>
+	<returns>スクリーン番号</returns>
+	<remarks>検証失敗時は-1を返します</remarks>
+</member><member name="M:DeskShot.ModuleMath.RotP(System.Drawing.PointF,System.Int32)">
+	<summary>
+ 指定座標の回転後の座標を求める
+ </summary>
+	<param name="Value">回転前座標</param>
+	<param name="Rot">回転角（度）</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleMath.RotP(System.Drawing.PointF,System.Drawing.PointF,System.Int32)">
+	<summary>
+ 指定座標の回転後の座標を求める
+ </summary>
+	<param name="Org">回転原点座標</param>
+	<param name="Value">回転座標</param>
+	<param name="Rot">回転角（度）</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleMath.RotP(System.Double,System.Double,System.Int32)">
+	<summary>
+ 指定座標の回転後の座標を求める
+ </summary>
+	<param name="ValueX">回転前X座標</param>
+	<param name="ValueY">回転前Y座標</param>
+	<param name="Rot">回転角（度）</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleMath.Calc3Point(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ 座標点を中心とする画像回転用３点計算
+ </summary>
+	<param name="X">原点（回転中心）Ｘ座標</param>
+	<param name="Y">原点（回転中心）Ｙ座標</param>
+	<param name="ImageWidth">画像幅</param>
+	<param name="ImageHeight">画像高さ</param>
+	<param name="Angle">回転角</param>
+	<returns> {左上座標, 右上座標, 左下座標}</returns>
+	<remarks>
+ ［使用方法］
+ Dim destinationPoints() As PointF = Calc3Point(_BoxSPosi.X, _BoxSPosi.Y, img2.Width * imgz, img2.Height * imgz, imga)
+ g.DrawImage(img2, destinationPoints)
+ </remarks>
+</member><member name="T:DeskShot.ModuleMath">
+	<summary>
+ 画像回転用の座標計算を行う
+ </summary>
+	<remarks></remarks>
+</member><member name="P:DeskShot.My.Resources.Resources.ResourceManager">
+	<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Culture">
+	<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.accept_button">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.arrow_down">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.arrow_left">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.arrow_right">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.arrow_up">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.camera_delete32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.camera_edit_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.camera_go_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.camera_go32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.cancel">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.clipboard_sign_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.cross">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.cursor">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.delete">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.dog_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.dog_icon_2">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.exclamation">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.file_extension_bmp_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.file_extension_jpg_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.file_extension_png_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.film_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.film_save_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.help">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.information">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.lightbulb">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.lightning">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.magnifier">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.mouse_pc">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.mouse_select_left">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.mouse_select_right">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.mouse_select_scroll">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_1">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_1_32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_2">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_2_32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_3">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_3_32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_4">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_4_32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_5">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_5_32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_6">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_6_32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_7">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_7_32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_8">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_8_32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_9">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.NoImage_9_32">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_1_Black_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_1_White_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_2_Black_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_2_White_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_3_Black_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_3_White_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_4_Black_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_4_White_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_5_Black_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_5_White_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_6_Black_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_6_White_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_7_Black_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_7_White_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_8_Black_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_8_White_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_9_Black_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Numbers_9_White_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.onigiri">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Onigiri_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.printer_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.Wordpad_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="P:DeskShot.My.Resources.Resources.zoom_fit_icon">
+	<summary>
+  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+</summary>
+</member><member name="T:DeskShot.My.Resources.Resources">
+	<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member><member name="M:DeskShot.FrmImageEdit.TrackBar1_Scroll(System.Object,System.EventArgs)">
+	<summary>
+ タイムライン移動
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmImageEdit.BtnMoveDown_Click(System.Object,System.EventArgs)">
+	<summary>
+ タイムライン前へ移動
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmImageEdit.BtnMoveUp_Click(System.Object,System.EventArgs)">
+	<summary>
+ タイムライン後へ移動
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmImageEdit.BtnDelCell_Click(System.Object,System.EventArgs)">
+	<summary>
+ フレーム削除
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmImageEdit.BtnSaveCell_Click(System.Object,System.EventArgs)">
+	<summary>
+ フレーム画像保存
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmImageEdit.BtnClose_Click(System.Object,System.EventArgs)">
+	<summary>
+ 終了ボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmImageEdit.BtnResize_Click(System.Object,System.EventArgs)">
+	<summary>
+ リサイズボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmImageEdit.MenuSaveVideo_Click(System.Object,System.EventArgs)">
+	<summary>
+ 動画の保存
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmImageEdit.BtnUpdate_Click(System.Object,System.EventArgs)">
+	<summary>
+ フレーム更新
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmImageEdit.BtnUndo_Click(System.Object,System.EventArgs)">
+	<summary>
+ アンドゥ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="F:DeskShot.FrmOnigiri.DrawMode.ModeHand">
+	<summary>
+ 手書きモード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DeskShot.FrmOnigiri.DrawMode.ModeBox">
+	<summary>
+ 矩形モード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DeskShot.FrmOnigiri.DrawMode.ModeLine">
+	<summary>
+ 直線モード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DeskShot.FrmOnigiri.DrawMode.ModeText">
+	<summary>
+ 文字描写モード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DeskShot.FrmOnigiri.DrawMode.ModeLineArrow">
+	<summary>
+ 矢印付き直線モード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DeskShot.FrmOnigiri.DrawMode.ModeSolid">
+	<summary>
+ 塗りつぶし矩形モード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DeskShot.FrmOnigiri.DrawMode.ModePicture">
+	<summary>
+ 図形モード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DeskShot.FrmOnigiri.DrawMode.ModeEllipsee">
+	<summary>
+ 円モード
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DeskShot.FrmOnigiri.DrawMode.ModeLineBothArrow">
+	<summary>
+ 矢印付き直線モード
+ </summary>
+	<remarks></remarks>
+</member><member name="T:DeskShot.FrmOnigiri.DrawMode">
+	<summary>
+ 作業モード
+ </summary>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmOnigiri.LoadPictureFile">
+	<summary>
+ 既存画像ファイルを読み込む時のファイル名
+ 無ければクリップボード
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.FrmOnigiri_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+	<summary>
+ フォームクローズ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.FrmOnigiri_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+	<summary>
+ フォームクローズ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.CommentEdit">
+	<summary>
+ コメント作成ダイアログ表示
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.FrmOnigiri_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ キーダウン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.DrawIcon">
+	<summary>
+ 画像の表示
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.FrmOnigiri_Load(System.Object,System.EventArgs)">
+	<summary>
+ フォームロード
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.SetIcon">
+	<summary>
+ 画像追加メニュー調整
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.SaveFileName(System.Int32)">
+	<summary>
+ 保存ファイル名設定
+ </summary>
+	<param name="Value"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuPrintOut_Click(System.Object,System.EventArgs)">
+	<summary>
+ TODO:プリンターへ出力
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuSaveClipbord_Click(System.Object,System.EventArgs)">
+	<summary>
+ クリップボードに画像を転送
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuMeClose_Click(System.Object,System.EventArgs)">
+	<summary>
+ 終了メニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuAddText_Click(System.Object,System.EventArgs)">
+	<summary>
+ 文字追加メニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.PictureBox1_DoubleClick(System.Object,System.EventArgs)">
+	<summary>
+ ダブルクリックで文字の描写
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.PictureBox2_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+	<summary>
+ マウス移動で文字も移動
+ </summary>C:\Makesource\DeskShot(画面キャプチャー)\DeskShot\FrmOnigiriSUB_Color.vb
+ <param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.PictureBox2_Click(System.Object,System.EventArgs)">
+	<summary>
+ クリックで文字位置確定
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.PictureBox1_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+	<summary>
+ マウスダウンイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.PictureBox1_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+	<summary>
+ マウスを動かした
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.PictureBox1_MouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+	<summary>
+ マウスアップ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuUndo_Click(System.Object,System.EventArgs)">
+	<summary>
+ アンドゥーメニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.ContextMenuStrip1_Opening(System.Object,System.ComponentModel.CancelEventArgs)">
+	<summary>
+ コンテキストメニューオープニング
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuSizeReset_Click(System.Object,System.EventArgs)">
+	<summary>
+ 元サイズに戻す
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuTopMost_Click(System.Object,System.EventArgs)">
+	<summary>
+ 前面にする
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuSendWordpad_Click(System.Object,System.EventArgs)">
+	<summary>
+ ワードパッド連携
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.SendWordpad(System.Boolean)">
+	<summary>
+ ワードパッド連携
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.Execute_Wordpad">
+	<summary>
+ ワードパッドの起動確認
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.AddPicture(System.Drawing.Image)">
+	<summary>
+ 画像追加メニュー
+ </summary>
+	<param name="Img"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuAddPicture_Click(System.Object,System.EventArgs)">
+	<summary>
+ 任意画像追加メニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuAddPicture2_Click(System.Object,System.EventArgs)">
+	<summary>
+ 所定アイコン追加メニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuAddPicture_100_Click(System.Object,System.EventArgs)">
+	<summary>
+ 拡大率を戻す
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuSelectColor_Other_Click(System.Object,System.EventArgs)">
+	<summary>
+ 描写色選択（任意）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuSelectColor_Red_Click(System.Object,System.EventArgs)">
+	<summary>
+ 描写色選択（赤）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuSelectColor_Blue_Click(System.Object,System.EventArgs)">
+	<summary>
+ 描写色選択（青）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuSelectColor_While_Click(System.Object,System.EventArgs)">
+	<summary>
+ 描写色選択（白）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuSelectColor_Black_Click(System.Object,System.EventArgs)">
+	<summary>
+ 描写色選択（黒）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuLineWidth_Click(System.Object,System.EventArgs)">
+	<summary>
+ 線幅設定
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuBarcode_Click(System.Object,System.EventArgs)">
+	<summary>
+ TODO:画像中バーコード認識
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuOnigiriHelp_Click(System.Object,System.EventArgs)">
+	<summary>
+ ヘルプ表示
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuSendMail_Click(System.Object,System.EventArgs)">
+	<summary>
+ TODO:直接メール送信
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri.MenuOnigiriSet_Click(System.Object,System.EventArgs)">
+	<summary>
+ おにぎりセット
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.Module4.SystemFullPath(System.Environment.SpecialFolder,System.String)">
+	<summary>
+ 特殊フォルダパスを検索する
+ </summary>
+	<param name="TargetFolder">対象となる特殊フォルダ</param>
+	<param name="FileName">ファイル名</param>
+	<returns>ファイル名を含むフルパス</returns>
+	<remarks>ファイル名指定時
+ ファイル名指定時はファイル名を含むフルパスを返します。(特殊フォルダ名＋固定フォルダ名＋ファイル名)またその特殊フォルダが無い場合は自動的に作成されます。
+ ファイル名が未指定の場合は特殊フォルダのパスを返します。(特殊フォルダ名＋固定フォルダ）但しこのフォルダの自動作成は行われません
+ 　　また、特殊フォルダ自体が存在しない場合は””が帰ります。
+ </remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.SetPict">
+	<summary>
+ 新規におにぎりセットを作る
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.AddPic(System.Drawing.Image)">
+	<summary>
+ おにぎりセットに追加
+ </summary>
+	<param name="Img"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuTopMost_Click(System.Object,System.EventArgs)">
+	<summary>
+ 前面表示
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuOutPic_SelOne_Click(System.Object,System.EventArgs)">
+	<summary>
+ 選択おにぎりを保存する
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuOutPic_All_Click(System.Object,System.EventArgs)">
+	<summary>
+ 全てのおにぎりを保存する
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuBackOnigiri_SelOne_Click(System.Object,System.EventArgs)">
+	<summary>
+ おにぎりに戻す（選択タブ）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuBackOnigiri_All_Click(System.Object,System.EventArgs)">
+	<summary>
+ おにぎりに戻す（全て）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuDelTab_SelOne_Click(System.Object,System.EventArgs)">
+	<summary>
+ タブ削除（選択タブ）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuDelTab_All_Click(System.Object,System.EventArgs)">
+	<summary>
+ タブ削除（全て）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuSendClip_SelOne_Click(System.Object,System.EventArgs)">
+	<summary>
+ クリップボードに送る（選択タブ）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuSendClip_All_Click(System.Object,System.EventArgs)">
+	<summary>
+ クリップボードに送る（全て）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuSendWordpad_SelOne_Click(System.Object,System.EventArgs)">
+	<summary>
+ ワードパッドに画像を送信（選択タブ）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuSendWordpad_All_Click(System.Object,System.EventArgs)">
+	<summary>
+ ワードパッドに画像を送信（全て）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSet.MenuStartSize_Click(System.Object,System.EventArgs)">
+	<summary>
+ 起動サイズに戻す
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmOnigiriSUB.SetText">
+	<summary>
+ 描写文字列
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmOnigiriSUB.SetFont">
+	<summary>
+ 文字フォント
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmOnigiriSUB.SetFontColor">
+	<summary>
+ 文字色
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmOnigiriSUB.UseBack">
+	<summary>
+ 背景使用？
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmOnigiriSUB.MojiBackColor">
+	<summary>
+ 背景色
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmOnigiriSUB.ShiftLeft">
+	<summary>
+ 背景左余白
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmOnigiriSUB.ShiftRight">
+	<summary>
+ 背景右余白
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmOnigiriSUB.ShiftTop">
+	<summary>
+ 背景上余白
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmOnigiriSUB.ShiftBottom">
+	<summary>
+ 背景下余白
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSUB.AddEvent">
+	<summary>
+ イベントの追加
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSUB.BtnSelectFont_Click(System.Object,System.EventArgs)">
+	<summary>
+ 文字フォント選択
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSUB.BtnOK_Click(System.Object,System.EventArgs)">
+	<summary>
+ ＯＫボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSUB.BtnCancel_Click(System.Object,System.EventArgs)">
+	<summary>
+ キャンセルボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSUB.DeawData">
+	<summary>
+ プレビュー作成
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSUB.TxtColorFore_SelectedColorChanged(System.Object,System.EventArgs)">
+	<summary>
+ 文字色選択
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSUB.TxtColorBack_SelectedColorChanged(System.Object,System.EventArgs)">
+	<summary>
+ 背景色選択
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmPosiForm.Menu_DeleteForm_Click(System.Object,System.EventArgs)">
+	<summary>
+ ポジション削除
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmPosiForm.Menu_MoveForm_Click(System.Object,System.EventArgs)">
+	<summary>
+ ここに移動メニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmPosiForm.Menu_CopyForm_Click(System.Object,System.EventArgs)">
+	<summary>
+ ポジションコピー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmPosiForm.MenuCancel_Click(System.Object,System.EventArgs)">
+	<summary>
+ キャンセルメニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleRegistry.WriteReg(System.String,System.String,System.Object)">
+	<summary>
+ レジストリに書き込む
+ </summary>
+	<param name="Section">セクション名</param>
+	<param name="KeyName">キー名</param>
+	<param name="Value">書き込み値</param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleRegistry.ReadReg(System.String,System.String,DeskShot.ModuleRegistry.enum_Type)">
+	<summary>
+ レジストリを読み込む
+ </summary>
+	<param name="Section">セクション名</param>
+	<param name="KeyName">キー名</param>
+	<param name="ValueType">値型</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.FrmMain_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+	<summary>
+ フォームクローズ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.FrmMain_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+	<summary>
+ フォームクローズ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.FrmMain_Load(System.Object,System.EventArgs)">
+	<summary>
+ フォームロード
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.FrmMain_Shown(System.Object,System.EventArgs)">
+	<summary>
+ フォームショーン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.FrmMain_Move(System.Object,System.EventArgs)">
+	<summary>
+ フォーム移動
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.FrmMain_Resize(System.Object,System.EventArgs)">
+	<summary>
+ フォームリサイズ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.ScreenInitial">
+	<summary>
+ 画面初期化
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.Timer1_Tick(System.Object,System.EventArgs)">
+	<summary>
+ GIF作成タイマー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnWindowSmall_Click(System.Object,System.EventArgs)">
+	<summary>
+ 最小化ボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuAPPEnd_Click(System.Object,System.EventArgs)">
+	<summary>
+ 終了メニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.ChangeMode(System.Object,System.EventArgs)">
+	<summary>
+ 動作モードの変更
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.ChangeWorkScreen">
+	<summary>
+ モード変更時の画面調整
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.CheckShotTimer">
+	<summary>
+ スナップタイマー数設定
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnExecute_Click(System.Object,System.EventArgs)">
+	<summary>
+ 作業開始ボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.AddFormHistory">
+	<summary>
+ 現在のメインフォームの位置・サイズを記憶
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.VideoStart">
+	<summary>
+ ＧＩＦ録画開始
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.CreateImage(System.String)">
+	<summary>
+ キャプチャー画像の追加
+ </summary>
+	<param name="filename"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.VideoStop">
+	<summary>
+ ＧＩＦ録画終了
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.VideoSave">
+	<summary>
+ ＧＩＦファイル保存
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.VisedSaveAs">
+	<summary>
+ ＧＩＦファイル保存（名前を付けて）
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.GetPicture">
+	<summary>
+ 画面をクリップ
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.PictureSave(System.Drawing.Bitmap)">
+	<summary>
+ 画像保存
+ </summary>
+	<param name="BMPData"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.PictureSaveAs(System.Drawing.Bitmap)">
+	<summary>
+ 画像保存（名前を付けて）
+ </summary>
+	<param name="BMPData"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.PictureClipbord(System.Drawing.Bitmap)">
+	<summary>
+ クリップボードへ画像を転送
+ </summary>
+	<param name="BMPData"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.PictureWordpad(System.Drawing.Bitmap)">
+	<summary>
+ 静止画（ワードパッド）
+ </summary>
+	<param name="BMPData"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.Execute_Wordpad">
+	<summary>
+ ワードパッドの起動確認
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuPlay_Click(System.Object,System.EventArgs)">
+	<summary>
+ ＧＩＦファイル再生
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuOpenFolder_Click(System.Object,System.EventArgs)">
+	<summary>
+ 作業フォルダを開く
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.ContextMenuStrip1_Opening(System.Object,System.ComponentModel.CancelEventArgs)">
+	<summary>
+ コンテントメニューオープニング
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuVideoEdit_Click(System.Object,System.EventArgs)">
+	<summary>
+ ＧＩＦファイル編集
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.Timer2_Tick(System.Object,System.EventArgs)">
+	<summary>
+ 一定時間でメッセージを消す
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnDialog_Click(System.Object,System.EventArgs)">
+	<summary>
+ ダイアログフィット
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.DialogFit(DeskShot.PosiShift_Collection)">
+	<summary>
+ ダイアログフィット
+ </summary>
+	<param name="SiftValue"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnDesktop_Click(System.Object,System.EventArgs)">
+	<summary>
+ 画面全体キャプチャー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuSetting_Setting_Click(System.Object,System.EventArgs)">
+	<summary>
+ 設定メニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuSetting_ViewScale_Click(System.Object,System.EventArgs)">
+	<summary>
+ シフト設定モード
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuSetting_Resize_Click(System.Object,System.EventArgs)">
+	<summary>
+ サイズ指定
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.ToolStripMenuItem2_Click(System.Object,System.EventArgs)">
+	<summary>
+ マウスショットキャプチャー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuAutoSmall_Click(System.Object,System.EventArgs)">
+	<summary>
+ 自動最小化メニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain._ShotTimer_Tick(System.Object,System.EventArgs)">
+	<summary>
+ ショットタイマー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnFitSize_Click(System.Object,System.EventArgs)">
+	<summary>
+ サイズフィットボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuShift_Click(System.Object,System.EventArgs)">
+	<summary>
+ エリアシフトメニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.WindowFit(DeskShot.PosiShift_Collection)">
+	<summary>
+ 画面フィット
+ </summary>
+	<param name="SiftValue"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnFitSize_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+	<summary>
+ 画面フィットメニュー
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuPosition_Top_Click(System.Object,System.EventArgs)">
+	<summary>
+ メニューの上付き
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuPosition_Bottom_Click(System.Object,System.EventArgs)">
+	<summary>
+ メニューの下付き
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuFormPosition_Regist_Click(System.Object,System.EventArgs)">
+	<summary>
+ 位置記憶
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuFormPosition_View_Click(System.Object,System.EventArgs)">
+	<summary>
+ 位置表示
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuFormPosition_Close_Click(System.Object,System.EventArgs)">
+	<summary>
+ 位置表示キャンセル
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuFormPosition_Clear_Click(System.Object,System.EventArgs)">
+	<summary>
+ 表示位置クリア
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.SavePosiData">
+	<summary>
+ ユーザポジション保存
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.GetPosiShift">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.LoadPosiData">
+	<summary>
+ ユーザポジション読込
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuScale0_Click(System.Object,System.EventArgs)">
+	<summary>
+ シフト量１
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuScale1_Click(System.Object,System.EventArgs)">
+	<summary>
+ シフト量２
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuScale3_Click(System.Object,System.EventArgs)">
+	<summary>
+ シフト量３
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuScale4_Click(System.Object,System.EventArgs)">
+	<summary>
+ シフト量４
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuCompress_Click(System.Object,System.EventArgs)">
+	<summary>
+ GIFコンプレスサイトへの誘導
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.Label1_DoubleClick(System.Object,System.EventArgs)">
+	<summary>
+ ショットタイマのキャンセル
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuHelpText_Click(System.Object,System.EventArgs)">
+	<summary>
+ テキストヘルプの表示
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.GcGlobalHook1_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ TODO:グローバルフック
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.HookShotTimer(System.Int32)">
+	<summary>
+ ショートカットキーによるタイマーショットの実行
+ </summary>
+	<param name="Value"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuSetting_KeyHook_Click(System.Object,System.EventArgs)">
+	<summary>
+ キーボードフック有効・無効
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnSelectAria_Click(System.Object,System.EventArgs)">
+	<summary>
+ キャプチャー範囲設定
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuPlayGIF_Click(System.Object,System.EventArgs)">
+	<summary>
+ GIF再生アプリ起動
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.Timer_TimeStamp_Tick(System.Object,System.EventArgs)">
+	<summary>
+ タイムスタンプ内容更新
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.LblimeStamp_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+	<summary>
+ タイムスタンプ移動開始
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.LblimeStamp_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+	<summary>
+ タイムスタンプ移動中
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.LblimeStamp_MouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+	<summary>
+ タイムスタンプ移動終了
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.LblTimeStampMove">
+	<summary>
+ タイムスタンプの位置計算
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.PictureBox1_Resize(System.Object,System.EventArgs)">
+	<summary>
+ メインが動かされたらタイムスタンプの位置も変更
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.ConMenuTimeStamp_Opening(System.Object,System.ComponentModel.CancelEventArgs)">
+	<summary>
+ タイムスタンプ　コンテキストメニュー調整
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuDisStamp_Click(System.Object,System.EventArgs)">
+	<summary>
+ タイムスタンプ 非表示設定
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuDirectOnigiri_Click_1(System.Object,System.EventArgs)">
+	<summary>
+ クリップボードの画像をおにぎりで表示する
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuPicture_Click(System.Object,System.EventArgs)">
+	<summary>
+ 画像ファイルをおにぎりで表示する
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.Panel1_DragDrop(System.Object,System.Windows.Forms.DragEventArgs)">
+	<summary>
+ 画像ファイルがドロップされた
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuFormPosition_AutoFollow_Click(System.Object,System.EventArgs)">
+	<summary>
+ 自動追尾モード
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.Timer_AutoFollow_Tick(System.Object,System.EventArgs)">
+	<summary>
+ ウィンドウの自動追尾
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.FrmMain_SizeChanged(System.Object,System.EventArgs)">
+	<summary>
+ 最小化時には追尾モードを一時停止させる
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuBarcode_Click(System.Object,System.EventArgs)">
+	<summary>
+ バーコード読み取り
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuInput_Screen_Click(System.Object,System.EventArgs)">
+	<summary>
+ 入力デバイス選択（スクリーン）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuInput_Camera_Click(System.Object,System.EventArgs)">
+	<summary>
+ 入力デバイス選択（カメラ）
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnExecuteCamera_Click(System.Object,System.EventArgs)">
+	<summary>
+ 撮影開始ボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.IsUseCAM">
+	<summary>
+ 使用出来るカメラがあるか？
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.CamExecute">
+	<summary>
+ 撮影実行・停止
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.CameraOtherButton(System.Boolean)">
+	<summary>
+ カメラ関連ボタン有効・無効
+ </summary>
+	<param name="Value"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnCamera_Setting_Click(System.Object,System.EventArgs)">
+	<summary>
+ カメラ設定
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.EnableUseButton(System.Boolean)">
+	<summary>
+ 使用コントロールの有効・無効
+ </summary>
+	<param name="Value"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.video_NewFrame(System.Object,AForge.Video.NewFrameEventArgs)">
+	<summary>
+ 画像表示
+ </summary>
+	<param name="sender"></param>
+	<param name="eventArgs"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.CloseVideoSource">
+	<summary>
+ カメラソースを閉じる
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnCamera_ZoomOut_Click(System.Object,System.EventArgs)">
+	<summary>
+ ズームアウト
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.BtnCamera_ZoomIn_Click(System.Object,System.EventArgs)">
+	<summary>
+ ズームイン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuOriginalSize_Click(System.Object,System.EventArgs)">
+	<summary>
+ 元サイズに戻す
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmMain.MenuShirtcat_Click(System.Object,System.EventArgs)">
+	<summary>
+ ショートカット表表示
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="F:DeskShot.ClassFormPosition.ID">
+	<summary>
+ 画面ID
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DeskShot.ClassFormPosition.Position">
+	<summary>
+ 画面位置
+ </summary>
+	<remarks></remarks>
+</member><member name="F:DeskShot.ClassFormPosition.FormSize">
+	<summary>
+ 画面サイズ
+ </summary>
+	<remarks></remarks>
+</member><member name="T:DeskShot.ClassFormPosition">
+	<summary>
+ ポジション記憶用コレクション
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleProcess.GetProcessesByFileName(System.String)">
+	<summary>
+ 起動プロセスの列挙(32ビット)
+ </summary>
+	<param name="searchFileName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleProcess.GetProcessesByFileName64(System.String)">
+	<summary>
+ 起動プロセスの列挙(64ビット)
+ </summary>
+	<param name="searchFileName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleProcess.WordPadWork(System.Boolean)">
+	<summary>
+ ワードパッドへの貼り付け操作
+ </summary>
+	<param name="_WordpadStatus"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleProcess.GetPidFromHwnd(System.Int32)">
+	<summary>
+ ウィンドウハンドルをプロセスIDに変換する
+ </summary>
+	<param name="hwnd"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri_SendMail.BtnOK_Click(System.Object,System.EventArgs)">
+	<summary>
+ OKボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri_SendMail.BtnCancel_Click(System.Object,System.EventArgs)">
+	<summary>
+ キャンセルボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri_SendMail.AddAddress">
+	<summary>
+ 入力されたアドレスがあるかを確認する
+ </summary>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiri_SendMail.BtnDelAddress_Click(System.Object,System.EventArgs)">
+	<summary>
+ 選択アドレス削除
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSetting.BtnOK_Click(System.Object,System.EventArgs)">
+	<summary>
+ OKボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmOnigiriSetting.BtbCancel_Click(System.Object,System.EventArgs)">
+	<summary>
+ キャンセルボタン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmSnapMouse.BaseFolder">
+	<summary>
+ 保存先フォルダ
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmSnapMouse.ShotSize">
+	<summary>
+ キャプチャサイズ
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmSnapMouse.ShotMode">
+	<summary>
+ キャプチャモード
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmSnapMouse.WorkScreenNo">
+	<summary>
+ キャプチャ対象スクリーン
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmSnapMouse.FrmSnapMouse_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+	<summary>
+ フォームクローズ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmSnapMouse.FrmSnapMouse_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+	<summary>
+ フォームクローズ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmSnapMouse.FrmSnapMouse_Load(System.Object,System.EventArgs)">
+	<summary>
+ フォームロード
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmSnapMouse.GcGlobalHook1_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ キーダウン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmSnapMouse.GcGlobalHook1_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ キーアップ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmSnapMouse.GcGlobalHook1_MouseDown(System.Object,System.Windows.Forms.HandledMouseEventArgs)">
+	<summary>
+ マウスダウン
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmSnapMouse.GcGlobalHook1_MouseMove(System.Object,System.Windows.Forms.HandledMouseEventArgs)">
+	<summary>
+ マウスムーブ
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmSnapMouse.ScreenCaptuer">
+	<summary>
+ 画面キャプチャー
+ </summary>
+	<remarks></remarks>
+</member><member name="P:DeskShot.FrmSetting.MainSize">
+	<summary>
+ メインフォームの大きさ
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="M:DeskShot.FrmSetting.SwapValue``1(``0@,``0@)">
+	<summary>
+ 値の入替
+ </summary>
+	<typeparam name="t"></typeparam>
+	<param name="Value1"></param>
+	<param name="Value2"></param>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleBarcode.ReadBarcode(System.Windows.Forms.Form,System.Drawing.Image)">
+	<summary>
+ イメージからバーコードを読み込む
+ </summary>
+	<param name="ParetForm"></param>
+	<param name="Img"></param>
+	<remarks></remarks>
+ https://www.atmarkit.co.jp/ait/articles/1803/14/news020.html
+ https://github.com/micjahn/ZXing.Net
+
+</member><member name="M:DeskShot.ModuleSendMail.MailSettingCheck">
+	<summary>
+ 設定確認
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleSendMail.SendMail(System.String,System.String,System.String)">
+	<summary>
+ メール送信
+ </summary>
+	<param name="FL"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:DeskShot.ModuleSendMail.SendTestMail">
+	<summary>
+ テストメール送信
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

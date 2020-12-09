@@ -1,0 +1,15 @@
+C:\Makesource\DeskShot\DeskShot\bin\Debug\DeskShot.exe
+C:\Makesource\DeskShot\DeskShot\bin\Debug\DeskShot.pdb
+C:\Makesource\DeskShot\DeskShot\bin\Debug\DeskShot.xml
+C:\Makesource\DeskShot\DeskShot\obj\Debug\DeskShot.FrmMain.resources
+C:\Makesource\DeskShot\DeskShot\obj\Debug\DeskShot.Resources.resources
+C:\Makesource\DeskShot\DeskShot\obj\Debug\DeskShot.vbproj.GenerateResource.Cache
+C:\Makesource\DeskShot\DeskShot\obj\Debug\DeskShot.exe
+C:\Makesource\DeskShot\DeskShot\obj\Debug\DeskShot.xml
+C:\Makesource\DeskShot\DeskShot\obj\Debug\DeskShot.pdb
+C:\Makesource\DeskShot\DeskShot\obj\Debug\DeskShot.FrmImageEdit.resources
+C:\Makesource\DeskShot\DeskShot\obj\Debug\DeskShot.FrmImageResize.resources
+C:\Makesource\DeskShot(画面キャプチャー)\DeskShot\bin\Debug\DeskShot.exe.config
+C:\Makesource\DeskShot(画面キャプチャー)\DeskShot\obj\Debug\DeskShot.exe
+C:\Makesource\DeskShot(画面キャプチャー)\DeskShot\obj\Debug\DeskShot.xml
+C:\Makesource\DeskShot(画面キャプチャー)\DeskShot\obj\Debug\DeskShot.pdb

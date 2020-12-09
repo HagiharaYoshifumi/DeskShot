@@ -1,0 +1,107 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MaskShot
+</name>
+</assembly>
+<members>
+<member name="M:MaskShot.Module1.CaptureScreen">
+	<summary>
+ プライマリスクリーンの画像を取得する
+ </summary>
+	<returns>プライマリスクリーンの画像</returns>
+</member><member name="M:MaskShot.Module1.CaptureActiveWindow(MaskShot.PosiShift_Collection)">
+	<summary>
+ アクティブなウィンドウの画像を取得する
+ </summary>
+	<returns>アクティブなウィンドウの画像</returns>
+</member><member name="P:MaskShot.My.Resources.Resources.ResourceManager">
+	<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member><member name="P:MaskShot.My.Resources.Resources.Culture">
+	<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member><member name="T:MaskShot.My.Resources.Resources">
+	<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member><member name="M:MaskShot.FrmMain.PictureClipbord(System.Drawing.Bitmap)">
+	<summary>
+ クリップボードへ画像を転送
+ </summary>
+	<param name="BMPData"></param>
+	<remarks></remarks>
+</member><member name="M:MaskShot.FrmMain.GetPicture">
+	<summary>
+ 画面をクリップ
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:MaskShot.FrmMain.DiarogFit">
+	<summary>
+ ウィンドウフィット
+ </summary>
+	<remarks></remarks>
+</member><member name="M:MaskShot.FrmMain.GcGlobalHook1_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ キーボードフック
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:MaskShot.FrmMain.GcGlobalHook1_MouseMove(System.Object,System.Windows.Forms.HandledMouseEventArgs)">
+	<summary>
+ マウスフック
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:MaskShot.FrmMain.IsOnKey_Control">
+	<summary>
+ コントロールキーを押されているか？
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:MaskShot.FrmMain.IsOnKey_Alt">
+	<summary>
+ ALTキーを押されているか？
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:MaskShot.FrmMain.RectPosition(System.Drawing.Point,System.Drawing.Point,System.Drawing.Point)">
+	<summary>
+ ポイントと矩形位置関係を調べる
+ </summary>
+	<param name="Pa">ポイント位置</param>
+	<param name="P1">対象矩形の左上座標</param>
+	<param name="P2">対象矩形の右下座標</param>
+	<returns>
+ 01(TopLeft)    |02(TopCenter)    |04(TopRight)
+ ---------------+-----------------+----------------------
+ 16(MiddleLeft) |32(MiddleCenter) |64(MiddleRight)
+ ---------------+-----------------+----------------------
+ 256(BottomLeft)|512(BottomCenter)|1024(BottomRight)
+ </returns>
+	<remarks>32(MiddleCenter)以外は指定矩形の「外」になります。</remarks>
+</member><member name="M:MaskShot.FrmMain.RectPosition(System.Drawing.Point,System.Drawing.Point,System.Drawing.Size)">
+	<summary>
+ ポイントと矩形位置関係を調べる
+ </summary>
+	<param name="Pa">ポイント位置</param>
+	<param name="P1">対象矩形の左上座標</param>
+	<param name="BSize">対象矩形サイズ</param>
+	<returns>
+ 01(TopLeft)    |02(TopCenter)    |04(TopRight)
+ ---------------+-----------------+----------------------
+ 16(MiddleLeft) |32(MiddleCenter) |64(MiddleRight)
+ ---------------+-----------------+----------------------
+ 256(BottomLeft)|512(BottomCenter)|1024(BottomRight)
+ </returns>
+	<remarks>32(MiddleCenter)以外は指定矩形の「外」になります。</remarks>
+</member>
+</members>
+</doc>

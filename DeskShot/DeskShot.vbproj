@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D637DD8-E8BB-491D-9A3E-A6673098D214}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>DeskShot.My.MyApplication</StartupObject>
+    <RootNamespace>DeskShot</RootNamespace>
+    <AssemblyName>DeskShot</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>DeskShot.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>DeskShot.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>main1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\AForge.NET Framework-2.2.5\Release\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls">
+      <HintPath>..\AForge.NET Framework-2.2.5\Release\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\AForge.NET Framework-2.2.5\Release\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\AForge.NET Framework-2.2.5\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\AForge.NET Framework-2.2.5\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.VFW">
+      <HintPath>..\AForge.NET Framework-2.2.5\Release\AForge.Video.VFW.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Vision">
+      <HintPath>..\AForge.NET Framework-2.2.5\Release\AForge.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.PlusPak.v22, Version=2.2.2013.1127, Culture=neutral, PublicKeyToken=fdd90f5c44b73170" />
+    <Reference Include="GrapeCity.Win.PlusPak.v70, Version=7.0.2013.1127, Culture=neutral, PublicKeyToken=63a9ba12b6923243, processorArchitecture=MSIL" />
+    <Reference Include="Ookii.Dialogs">
+      <HintPath>.\Ookii.Dialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="zxing">
+      <HintPath>.\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="ClassFormControl.vb" />
+    <Compile Include="FrmDialog1.Designer.vb">
+      <DependentUpon>FrmDialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImageEdit.Designer.vb">
+      <DependentUpon>FrmImageEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImageEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImageResize.Designer.vb">
+      <DependentUpon>FrmImageResize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImageResize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOnigiri.Designer.vb">
+      <DependentUpon>FrmOnigiri.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOnigiri.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOnigiriBarcode.Designer.vb">
+      <DependentUpon>FrmOnigiriBarcode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOnigiriBarcode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOnigiriSet.Designer.vb">
+      <DependentUpon>FrmOnigiriSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOnigiriSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOnigiriSetting.Designer.vb">
+      <DependentUpon>FrmOnigiriSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOnigiriSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOnigiriSizeSelect.Designer.vb">
+      <DependentUpon>FrmOnigiriSizeSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOnigiriSizeSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOnigiriSUB.Designer.vb">
+      <DependentUpon>FrmOnigiriSUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOnigiriSUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOnigiriSUB_Color.Designer.vb">
+      <DependentUpon>FrmOnigiriSUB_Color.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOnigiriSUB_Color.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOnigiri_SendMail.Designer.vb">
+      <DependentUpon>FrmOnigiri_SendMail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOnigiri_SendMail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPosiForm.Designer.vb">
+      <DependentUpon>FrmPosiForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPosiForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResize.Designer.vb">
+      <DependentUpon>FrmResize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmResize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectAria.Designer.vb">
+      <DependentUpon>FrmSelectAria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectAria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetting.Designer.vb">
+      <DependentUpon>FrmSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShotcats.Designer.vb">
+      <DependentUpon>FrmShotcats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShotcats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSnapMouse.Designer.vb">
+      <DependentUpon>FrmSnapMouse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSnapMouse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewer1.Designer.vb">
+      <DependentUpon>FrmViewer1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewer1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewer2.Designer.vb">
+      <DependentUpon>FrmViewer2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewer2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="Module2.vb" />
+    <Compile Include="Module3.vb" />
+    <Compile Include="Module4.vb" />
+    <Compile Include="Module5.vb" />
+    <Compile Include="ModuleBarcode.vb" />
+    <Compile Include="ModuleProcess.vb" />
+    <Compile Include="ModuleErrorStack.vb" />
+    <Compile Include="ModuleMath.vb" />
+    <Compile Include="ModuleRegistry.vb" />
+    <Compile Include="ModuleSendKey.vb" />
+    <Compile Include="ModuleSendMail.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmDialog1.resx">
+      <DependentUpon>FrmDialog1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImageEdit.resx">
+      <DependentUpon>FrmImageEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImageResize.resx">
+      <DependentUpon>FrmImageResize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOnigiri.resx">
+      <DependentUpon>FrmOnigiri.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOnigiriBarcode.resx">
+      <DependentUpon>FrmOnigiriBarcode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOnigiriSet.resx">
+      <DependentUpon>FrmOnigiriSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOnigiriSetting.resx">
+      <DependentUpon>FrmOnigiriSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOnigiriSizeSelect.resx">
+      <DependentUpon>FrmOnigiriSizeSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOnigiriSUB.resx">
+      <DependentUpon>FrmOnigiriSUB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOnigiriSUB_Color.resx">
+      <DependentUpon>FrmOnigiriSUB_Color.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOnigiri_SendMail.resx">
+      <DependentUpon>FrmOnigiri_SendMail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPosiForm.resx">
+      <DependentUpon>FrmPosiForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResize.resx">
+      <DependentUpon>FrmResize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectAria.resx">
+      <DependentUpon>FrmSelectAria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetting.resx">
+      <DependentUpon>FrmSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShotcats.resx">
+      <DependentUpon>FrmShotcats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSnapMouse.resx">
+      <DependentUpon>FrmSnapMouse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewer1.resx">
+      <DependentUpon>FrmViewer1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewer2.resx">
+      <DependentUpon>FrmViewer2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\NoImage\mouse_pc.png" />
+    <None Include="Image\NoImage\mouse_select_left.png" />
+    <None Include="Image\NoImage\mouse_select_right.png" />
+    <None Include="Image\NoImage\mouse_select_scroll.png" />
+    <None Include="Image\NoImage\cursor.png" />
+    <None Include="Image\NoImage\White\Numbers-9-White-icon.png" />
+    <None Include="Image\NoImage\White\Numbers-1-White-icon.png" />
+    <None Include="Image\NoImage\White\Numbers-2-White-icon.png" />
+    <None Include="Image\NoImage\White\Numbers-3-White-icon.png" />
+    <None Include="Image\NoImage\White\Numbers-4-White-icon.png" />
+    <None Include="Image\NoImage\White\Numbers-5-White-icon.png" />
+    <None Include="Image\NoImage\White\Numbers-6-White-icon.png" />
+    <None Include="Image\NoImage\White\Numbers-7-White-icon.png" />
+    <None Include="Image\NoImage\White\Numbers-8-White-icon.png" />
+    <None Include="Image\NoImage\Black\Numbers-9-Black-icon.png" />
+    <None Include="Image\NoImage\Black\Numbers-1-Black-icon.png" />
+    <None Include="Image\NoImage\Black\Numbers-2-Black-icon.png" />
+    <None Include="Image\NoImage\Black\Numbers-3-Black-icon.png" />
+    <None Include="Image\NoImage\Black\Numbers-4-Black-icon.png" />
+    <None Include="Image\NoImage\Black\Numbers-5-Black-icon.png" />
+    <None Include="Image\NoImage\Black\Numbers-6-Black-icon.png" />
+    <None Include="Image\NoImage\Black\Numbers-7-Black-icon.png" />
+    <None Include="Image\NoImage\Black\Numbers-8-Black-icon.png" />
+    <Content Include="TextFile1.txt" />
+    <None Include="Image\24\film-save-icon.png" />
+    <None Include="Image\24\camera-edit-icon.png" />
+    <None Include="Image\24\camera-go-icon.png" />
+    <None Include="Image\24\file-extension-bmp-icon.png" />
+    <None Include="Image\24\file-extension-jpg-icon.png" />
+    <None Include="Image\24\file-extension-png-icon.png" />
+    <None Include="Image\24\film-icon.png" />
+    <None Include="Image\32\camera_delete32.png" />
+    <None Include="Image\32\camera_go32.png" />
+    <None Include="Image\32\printer.png" />
+    <None Include="Image\24\printer-icon.png" />
+    <None Include="Image\24\Onigiri-icon.png" />
+    <None Include="Image\24\clipboard-sign-icon.png" />
+    <None Include="Image\24\onigiri.png" />
+    <None Include="Image\NoImage\NoImage_1.png" />
+    <None Include="Image\NoImage\NoImage_2.png" />
+    <None Include="Image\NoImage\NoImage_9.png" />
+    <None Include="Image\NoImage\NoImage_3.png" />
+    <None Include="Image\NoImage\NoImage_4.png" />
+    <None Include="Image\NoImage\NoImage_5.png" />
+    <None Include="Image\NoImage\NoImage_6.png" />
+    <None Include="Image\NoImage\NoImage_7.png" />
+    <None Include="Image\NoImage\NoImage_8.png" />
+    <None Include="Image\NoImage\information.png" />
+    <None Include="Image\NoImage\lightbulb.png" />
+    <None Include="Image\NoImage\lightning.png" />
+    <None Include="Image\NoImage\magnifier.png" />
+    <None Include="Image\NoImage\accept_button.png" />
+    <None Include="Image\NoImage\arrow_down.png" />
+    <None Include="Image\NoImage\arrow_left.png" />
+    <None Include="Image\NoImage\arrow_right.png" />
+    <None Include="Image\NoImage\arrow_up.png" />
+    <None Include="Image\NoImage\cancel.png" />
+    <None Include="Image\NoImage\cross.png" />
+    <None Include="Image\NoImage\delete.png" />
+    <None Include="Image\NoImage\exclamation.png" />
+    <None Include="Image\NoImage\help.png" />
+    <None Include="Image\NoImage\NoImage_1_32.png" />
+    <None Include="Image\NoImage\NoImage_8_32.png" />
+    <None Include="Image\NoImage\NoImage_9_32.png" />
+    <None Include="Image\NoImage\NoImage_2_32.png" />
+    <None Include="Image\NoImage\NoImage_3_32.png" />
+    <None Include="Image\NoImage\NoImage_4_32.png" />
+    <None Include="Image\NoImage\NoImage_5_32.png" />
+    <None Include="Image\NoImage\NoImage_6_32.png" />
+    <None Include="Image\NoImage\NoImage_7_32.png" />
+    <None Include="Image\24\Wordpad-icon.png" />
+    <None Include="Image\24\dog-icon.png" />
+    <None Include="Image\24\zoom-fit-icon.png" />
+    <None Include="Image\24\dog-icon-2.png" />
+    <Content Include="main1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
