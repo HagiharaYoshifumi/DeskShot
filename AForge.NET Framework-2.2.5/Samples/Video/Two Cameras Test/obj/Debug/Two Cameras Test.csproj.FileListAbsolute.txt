@@ -1,0 +1,20 @@
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\Two Cameras Test.exe
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\Two Cameras Test.pdb
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.Controls.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.Video.DirectShow.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.Video.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.Imaging.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.Math.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.Controls.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.Video.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.Video.DirectShow.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.Imaging.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\bin\Debug\AForge.Math.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\obj\Debug\Two Cameras Test.csprojResolveAssemblyReference.cache
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\obj\Debug\TwoCamerasTest.MainForm.resources
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\obj\Debug\TwoCamerasTest.Properties.Resources.resources
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\obj\Debug\Two Cameras Test.csproj.GenerateResource.Cache
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\obj\Debug\Two Cameras Test.exe
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Two Cameras Test\obj\Debug\Two Cameras Test.pdb

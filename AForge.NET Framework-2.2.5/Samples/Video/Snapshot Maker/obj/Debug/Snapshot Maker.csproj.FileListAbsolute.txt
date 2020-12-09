@@ -1,0 +1,21 @@
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\Snapshot Maker.exe
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\Snapshot Maker.pdb
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.Controls.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.Video.DirectShow.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.Video.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.Imaging.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.Math.dll
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.Controls.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.Video.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.Video.DirectShow.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.Imaging.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\bin\Debug\AForge.Math.xml
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\obj\Debug\Snapshot Maker.csprojResolveAssemblyReference.cache
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\obj\Debug\Snapshot_Maker.MainForm.resources
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\obj\Debug\Snapshot_Maker.Properties.Resources.resources
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\obj\Debug\Snapshot_Maker.SnapshotForm.resources
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\obj\Debug\Snapshot Maker.csproj.GenerateResource.Cache
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\obj\Debug\Snapshot Maker.exe
+C:\Makesource\DeskShot(画面キャプチャー)\AForge.NET Framework-2.2.5\Samples\Video\Snapshot Maker\obj\Debug\Snapshot Maker.pdb
